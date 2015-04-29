@@ -17,7 +17,7 @@ import com.decade.framework.DZApplication;
  * 
  */
 public class DZNetBroadcast extends BroadcastReceiver {
-	private static DCiNetStateCallback _netStateCallback = null;
+	private static DZiNetStateCallback _netStateCallback = null;
 	private static DZNetBroadcast _receiver = new DZNetBroadcast();
 	private static IntentFilter _intentFilter;
 
@@ -25,7 +25,7 @@ public class DZNetBroadcast extends BroadcastReceiver {
 		setReceiver(context);
 	}
 	
-	public static void registerReceiver(Context context,DCiNetStateCallback netStateCallback) {
+	public static void registerReceiver(Context context,DZiNetStateCallback netStateCallback) {
 		_netStateCallback = netStateCallback;
 		setReceiver(context);
 	}
@@ -75,7 +75,7 @@ public class DZNetBroadcast extends BroadcastReceiver {
 	 * @date: 2013-9-16
 	 * 
 	 */
-	public interface DCiNetStateCallback {
+	public interface DZiNetStateCallback {
 		public void connected();
 		public void disconnected();
 	}
